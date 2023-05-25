@@ -24,8 +24,8 @@
 // #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 // Macros:
-#define meh &as LC(LS(LALT))
-#define hyper &as LC(LS(LA(LGUI)))
+#define meh LC(LS(LALT))
+#define hyper LC(LS(LA(LGUI)))
 
 &lt {
     tapping-term-ms = <150>;
@@ -102,7 +102,7 @@
         //│  INSERT  │          │  CAPSWORD│  [ {     │  ] }     │   │          │  >       │          │          │          │
            &kp INS    &none      &caps_word &kp LBKT   &kp RBKT       &none      &kp GT     &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans        &trans     &trans
+                                             &trans     &trans        &trans     &kp hyper
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -120,7 +120,7 @@
         //│  F11     │  F12     │  F13     │  F14     │  F15     │   │  HOME    │  PG DOWN │  PG UP   │  END     │          │
            &kp F11    &kp F12    &kp F13    &kp F14    &kp F15        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &trans      &trans         &trans     &trans
+                                      		&kp meh    &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
