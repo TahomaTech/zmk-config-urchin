@@ -75,16 +75,16 @@
             label ="Base";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-           &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  ; :     │
+           &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ; :      │
-           &kp A      &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      &kp SEMI
+        //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ O        │
+           &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  LGUI Z  │  LALT X  │  C       │  V       │  B       │   │  N       │  M       │ , <      │ RALT . > │ RGUI / ? │
-           &hm LGUI Z &hm LALT X &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &hm RALT DOT &hm RGUI FSLH
+        //│  LGUI Z  │  LALT X  │  C       │  D       │  V       │   │  K       │  H       │ , <      │ RALT . > │ RGUI / ? │
+           &hm LGUI Z &hm LALT X &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &hm RALT DOT &hm RGUI FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp LCTRL &lt LOWER SPACE &lt UPPER RET &kp RSHFT
+                                            &kp LCTRL &lt LOWER SPACE &mo UPPER  &kp RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
