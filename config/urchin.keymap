@@ -3,6 +3,10 @@
  *
  * SPDX-License-Identifier: MIT
  */
+ 
+// Author: Ryan H.
+// Filename: urchin.keymap
+// Keymap settings for an Urchin.
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -42,16 +46,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-        as: auto_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "AUTO_SHIFT";
-            #binding-cells = <2>;
-            tapping_term_ms = <135>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
     };
 
     conditional_layers {
@@ -87,8 +81,8 @@
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ; :      │
            &kp A      &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-           &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+        //│  LGUI Z  │  LALT X  │  C       │  V       │  B       │   │  N       │  M       │ , <      │ RALT . > │ RGUI / ? │
+           &hm LGUI Z &hm LALT X &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &hm RALT DOT &hm RGUI FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp LCTRL &lt LOWER SPACE &lt UPPER RET &kp RSHFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -103,7 +97,7 @@
            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CAPS    │  ESC     │  TAB     │  ' "     │  ` ~     │   │          │  - _     │  = +     │  \ |     │          │
-           &kp CAPS      &kp ESC    &kp TAB    &kp SQT    &kp GRAVE      &none      &kp MINUS  &kp EQUAL  &kp BSLH   &none
+           &kp CAPS   &kp ESC    &kp TAB    &kp SQT    &kp GRAVE      &none      &kp MINUS  &kp EQUAL  &kp BSLH   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  INSERT  │          │  CAPSWORD│  [ {     │  ] }     │   │          │  >       │          │          │          │
            &kp INS    &none      &caps_word &kp LBKT   &kp RBKT       &none      &kp GT     &none      &none      &none
