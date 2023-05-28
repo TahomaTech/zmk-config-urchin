@@ -37,7 +37,7 @@
 
 &mo {
 	tapping-term-ms = <150>;
-}
+};
 
 / {
     behaviors {
