@@ -130,13 +130,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │PROFILE 0 │          │PROFILE 3 │              │  VOL UP  │          │          │  RESET   │
-           &sys_reset &none     &bt BT_SEL 0  &none   &bt BT_SEL 3    &none      &kp C_VOL_UP &trans   &trans     &sys_reset
+           &sys_reset &none     &bt BT_SEL 0  &none   &bt BT_SEL 3    &none      &kp C_VOL_UP &none    &none      &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │PROFILE 1 │          │PROFILE 4 │   │  PP      │  VOL DN  │          │          │BOOTLOADER│
-          &bootloader &none     &bt BT_SEL 1  &none   &bt BT_SEL 4    &kp C_PP   &kp C_VOL_DN &trans   &trans     &bootloader
+          &bootloader &none     &bt BT_SEL 1  &none   &bt BT_SEL 4    &kp C_PP   &kp C_VOL_DN &none    &none      &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │PROFILE 2 │          │ CLEAR BT │   │          │  PREV    │  NEXT    │          │          │
-            &none     &none     &bt BT_SEL 2  &none   &bt BT_CLR      &trans     &kp C_PREV &kp C_NEXT &trans     &trans
+            &none     &none     &bt BT_SEL 2  &none   &bt BT_CLR      &none      &kp C_PREV &kp C_NEXT &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
