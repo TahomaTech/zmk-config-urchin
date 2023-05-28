@@ -35,10 +35,6 @@
     tapping-term-ms = <150>;
 };
 
-&mo {
-	tapping-term-ms = <150>;
-};
-
 / {
     behaviors {
         hm: homerow_mods {
