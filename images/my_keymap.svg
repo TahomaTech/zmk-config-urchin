@@ -176,7 +176,7 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="144.0" y="394.0" width="52.0" height="52.0" class="key"/>
 <text x="170.0" y="420.0" class="tap">PSCRN</text>
 <rect rx="6.0" ry="6.0" x="200.0" y="409.68" width="52.0" height="52.0" class="key"/>
-<text x="226.0" y="435.68" class="tap">Tab</text>
+<text x="226.0" y="435.68" class="tap">TAB</text>
 <rect rx="6.0" ry="6.0" x="256.0" y="417.52" width="52.0" height="52.0" class="key"/>
 <text x="282.0" y="443.52" class="tap" style="font-size: 70%">&amp;caps_word</text>
 <rect rx="6.0" ry="6.0" x="424.0" y="417.52" width="52.0" height="52.0" class="key"/>
