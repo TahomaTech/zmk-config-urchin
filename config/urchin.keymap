@@ -19,10 +19,6 @@
 #define UPPER 2
 #define SYSTEM 3
 
-// Home row mods macro
-// #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-// #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
-
 // Macros:
 #define meh LC(LS(LALT))
 #define hyper LC(LS(LA(LGUI)))
@@ -47,6 +43,20 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
+    // combos {
+    //     compatible = "zmk,combos";
+    //     combo_esc {
+    //         timeout-ms = <50>;
+    //         key-positions = <0 1>; // Q+W
+    //         bindings = <&kp ESC>;
+    //     };
+    //     combo_tab {
+    //         timeout-ms = <50>;
+    //         key-positions = <10 11>; // A+S
+    //         bindings = <&kp TAB>;
+    //     };
+    // };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -75,7 +85,7 @@
             label ="Base";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P     │
+        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ; :     │
@@ -93,16 +103,16 @@
             label = "Lower";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  1 !     │  2 @     │  3 #     │  4 $     │  5 %     │   │  6 ^     │  7 &     │  8 *     │  9 (     │  0 )     │
-           &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+        //│  ESC     │          │  PSCRN   │  TAB     │ CAPSWORD │   │          │  [ {     │  ] }     │  DEL     │  BSPC    │
+           &kp ESC    &none      &kp PSCRN  &kp Tab    &caps_word     &none      &kp LBKT   &kp RBKT   &kp DEL    &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  CAPS    │  ESC     │  TAB     │  ' "     │  ` ~     │   │          │  - _     │  = +     │  \ |     │          │
-           &kp CAPS   &kp ESC    &kp TAB    &kp SQT    &kp GRAVE      &none      &kp MINUS  &kp EQUAL  &kp BSLH   &none
+        //│  1 !     │  2 @     │  3 #     │  4 $     │  5 %     │   │  ' "     │  - _     │  = +     │  \ |     │          │
+           &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp SQT    &kp MINUS  &kp EQUAL  &kp BSLH   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  INSERT  │          │  CAPSWORD│  [ {     │  ] }     │   │          │  >       │          │          │          │
-           &kp INS    &none      &caps_word &kp LBKT   &kp RBKT       &none      &kp GT     &none      &none      &none
+        //│  6 ^     │  7 &     │  8 *     │  9 (     │  0 )     │   │  ` ~     │  >       │          │          │  hyper   │
+           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0         &kp GRAVE  &kp GT     &none      &none      &kp hyper
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans        &trans     &kp hyper
+                                             &trans     &trans        &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -111,8 +121,8 @@
             label = "Upper";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  F1      │  F2      │  F3      │  F4      │  F5      │   │  DEL     │  BSPC    │  DW      │          │          │
-           &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp DEL    &kp BSPC   &dw        &none      &none
+        //│  F1      │  F2      │  F3      │  F4      │  F5      │   │          │          │          │  DEL     │  BSPC    │
+           &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &none      &none      &none      &kp DEL    &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  F6      │  F7      │  F8      │  F9      │  F10     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  RETURN  │
            &kp F6     &kp F7     &kp F8     &kp F9     &kp F10        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp RET
@@ -136,7 +146,7 @@
           &bootloader &none     &bt BT_SEL 1  &none   &bt BT_SEL 4    &kp C_PP   &kp C_VOL_DN &none    &none      &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │PROFILE 2 │          │ CLEAR BT │   │          │  PREV    │  NEXT    │          │          │
-            &none     &none     &bt BT_SEL 2  &none   &bt BT_CLR      &none      &kp C_PREV &kp C_NEXT &none      &none
+           &none     &none     &bt BT_SEL 2  &none   &bt BT_CLR      &none      &kp C_PREV &kp C_NEXT &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
