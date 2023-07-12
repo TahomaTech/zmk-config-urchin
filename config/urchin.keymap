@@ -104,7 +104,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  ESC     │          │  PSCRN   │  TAB     │ CAPSWORD │   │          │  [ {     │  ] }     │  DEL     │  BSPC    │
-           &kp ESC    &none      &kp PSCRN  &kp Tab    &caps_word     &none      &kp LBKT   &kp RBKT   &kp DEL    &kp BSPC
+           &kp ESC    &none      &kp PSCRN  &kp TAB    &caps_word     &none      &kp LBKT   &kp RBKT   &kp DEL    &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  1 !     │  2 @     │  3 #     │  4 $     │  5 %     │   │  ' "     │  - _     │  = +     │  \ |     │          │
            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5         &kp SQT    &kp MINUS  &kp EQUAL  &kp BSLH   &none
