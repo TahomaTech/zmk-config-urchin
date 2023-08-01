@@ -23,13 +23,12 @@
 #define meh LC(LS(LALT))
 #define hyper LC(LS(LA(LGUI)))
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM) \
         combo_##NAME { \
             timeout-ms = <TERM>; \
             bindings = <BINDINGS>; \
             key-positions = <KEYPOS>; \
             layers = <LAYERS>; \
-            global-quick-tap-ms = <QUICKTAP>; \
         };
 
 &lt {
@@ -63,11 +62,11 @@
 
     combos {
         compatible = "zmk,combos";
-        COMBO(bspc,  &kp BSPC,  6 7,   BASE, 40, 200)
-        COMBO(del,   &kp DEL,   7 8,   BASE, 40, 200)
-        COMBO(esc,   &kp ESC,   0 10,  BASE, 40, 200)
-        COMBO(pscrn, &kp PSCRN, 10 20, BASE, 40, 200)
-        COMBO(tab,   &kp TAB,   12 13, BASE, 40, 200)
+        COMBO(bspc,  &kp BSPC,  6 7,   BASE, 40)
+        COMBO(del,   &kp DEL,   7 8,   BASE, 40)
+        COMBO(esc,   &kp ESC,   0 10,  BASE, 40)
+        COMBO(pscrn, &kp PSCRN, 10 20, BASE, 40)
+        COMBO(tab,   &kp TAB,   12 13, BASE, 40)
     };
 
     conditional_layers {
